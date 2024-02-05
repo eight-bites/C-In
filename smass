@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class d_r_m{
+public:
+    int mass[3][3];  
+    void zapol(){
+        for(int j=0; j< 3; j++){
+            for(int i = 0; i <3; i++){
+            cin >> mass[i][j];
+        }
+        }
+    }
+};
+
+int main(){
+    d_r_m massiv1;
+    massiv1.zapol();
+    for(int j=0; j< 3; j++){
+            for(int i = 0; i <3; i++){
+            cout << massiv1.mass[i][j] << "  ";
+        }
+        cout << endl;
+        }
+    
+}
