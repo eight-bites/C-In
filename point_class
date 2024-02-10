@@ -1,0 +1,44 @@
+//Создать класс point, который содержит:
+//  -поля int x, y
+// -конструкторы, позволяющие создать экземпляр класса:
+//  с нулевыми координами
+//  с заданными координатами.
+//Функции, позволяющиее определить:
+//вывести координаты точки на экран.
+//Рассчитать расстояние от начала координат до точки
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class point{
+public:
+    //поля
+    int x; 
+    int y;
+    //конструкторы
+    point();//конструктор по умолчанию
+    point(int a, int b){ //обычный конструктор 
+        x = a;
+        y = b;
+    }
+    //Функции
+    void vivod(){ //вывести координаты точки на экран.
+        cout << "x-koordinata " << x << "\n";
+        cout << "y-koordinata " << y << "\n";
+    }
+    
+    float rasst(){ //Рассчитать расстояние от начала координат до точки
+        return sqrt(pow(x,2)+pow(y,2));
+        
+    }
+};
+
+int main()
+{
+    point pervaya(1,2);
+    cout << pervaya.rasst() << endl;
+    point vtoraya(2,8);
+    vtoraya.vivod();
+    return 0;
+}
