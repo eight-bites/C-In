@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class pyat{
+  public:
+  int a;
+  int b;
+  int summator(){
+      return a+b;
+  };
+};
+
+
+int schet(int a){
+    int b;
+    b = a - 1;
+    return b;
+}
+
+int main()
+{   pyat chetire;
+    chetire.a = 4; 
+    chetire.b = 9;
+    cout << chetire.summator() << endl;
+    cout << schet(9);
+    //cout << b;
+    return 0;
+}
